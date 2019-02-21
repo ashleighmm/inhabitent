@@ -63,3 +63,22 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "content";
 @import "media";
 @import "page-templates";
+
+@import "product";
+@import "journal";
+@import "adventure";
+
+@import "globals";
+
+.single-post {
+	h1 {
+		color: white;
+		background: aquamarine;
+	}
+}
+
+.single-product {
+	h1 {
+		color: brown;
+	}
+}
