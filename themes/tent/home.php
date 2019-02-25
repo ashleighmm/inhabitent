@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file.
+ * The template for displaying all pages.
  *
  * @package RED_Starter_Theme
  */
@@ -9,18 +9,10 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<section class="home-hero">
-
-			</section>
-
-			<section class="shop">
-
-			</section>
-
-			<section class="journal">
+			<section>
 				<?php
 					// Use get_posts to get journal posts
-					$args = array( 'post_type' => 'post', 'posts_per_page' => '3' );
+					$args = array( 'post_type' => 'post', 'posts_per_page' => '12' );
 					$journal_posts = get_posts( $args );
 					if ( ! empty( $news_posts ) ) :   
 				?>
@@ -43,11 +35,7 @@ get_header(); ?>
 						</ul>
 				<?php endif; ?>
 			</section>
-
-			<section class="adventures">
-				<?php get_sidebar(); ?>
-			</section>
-
+			<?php get_sidebar(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
